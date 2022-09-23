@@ -9,13 +9,29 @@ Código Condição de pagamento
 4 Em três vezes, preço normal de etiqueta mais juros de 10%*/
 
 let produto = Number(prompt("Qual o valor do produto que você vai comprar?"))
-let formaPagamento = prompt(`Informe o método de pagamento:
+
+while (isNaN(produto) || produto <= 0) {
+  alert("O preço digitado é inválido, informe apenas o valor em números e maior que ZERO.")
+  produto = Number(prompt("Qual o valor do produto que você vai comprar?"))
+}
+
+let formaPagamento = Number(prompt(`Informe o método de pagamento:
 1 - Dinheiro
 2 - Cheque
-3 - Cartão`)
-if (formaPagamento == "1" || formaPagamento == "2") {
+3 - Cartão`))
+
+while (isNaN(formaPagamento) || formaPagamento > 3 || formaPagamento < 1) {
+  alert(`Método inválido`)
+  Number(formaPagamento = prompt(`Informe o método de pagamento:
+1 - Dinheiro
+2 - Cheque
+3 - Cartão`))
+}
+
+
+if (formaPagamento == 1 || formaPagamento == 2) {
   alert(`O valor do seu produto é ${produto * 0.9} reais.`)
-} else if (formaPagamento == "3") {
+} else if (formaPagamento == 3) {
   let parcelamento = prompt("Vai parcelar? 1 = sim ou 2 = não")
   if (parcelamento == "2") {
     alert(`O valor do seu produto é ${produto * 0.85} reais.`)

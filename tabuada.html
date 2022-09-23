@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tabuada.css" />
+    <title>Tabuada</title>
+  </head>
+  <body>
+    <header>
+      <h1>Vamos usar a tabuada!!</h1>
+    </header>
+    <section>
+      <div>
+        <p>
+          <label for="num">Número:</label>
+          <input type="number" id="nTxt" />
+          <button type="button" onclick="tabuada()">Gerar Tabuada</button>
+        </p>
+      </div>
+
+      <div id="centro">
+        <select name="select" size="10" id="tab">
+          <option value="mensagem">Digite um número acima...</option>
+        </select>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; SoulCode</p>
+    </footer>
+    <script src="tabuada.js"></script>
+  </body>
+</html>
