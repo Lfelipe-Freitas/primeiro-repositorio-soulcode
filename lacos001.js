@@ -8,7 +8,7 @@ let media = total / contador
 alert(media)*/
 
 let media = 0
-		let contador = parseInt(prompt("Digite quantos numeros você vai precisar"))
+		let contador = Number(prompt("Digite quantos numeros você vai precisar"))
 		let userInput
 
 		for (i = 1; i <= contador; i++) {
